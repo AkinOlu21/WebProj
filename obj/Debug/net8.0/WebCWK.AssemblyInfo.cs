@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebCWK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+921edb5097273be647f3484d53db6826e3a5de78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0901fbc0fef6eb184a7fa6fdb37200ad84ea1648")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebCWK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebCWK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
