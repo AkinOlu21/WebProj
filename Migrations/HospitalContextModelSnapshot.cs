@@ -47,23 +47,18 @@ namespace WebCWK.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ContactNumber")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Specialization")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("DoctorId");
@@ -78,7 +73,6 @@ namespace WebCWK.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Diagnosis")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("DoctorId")
@@ -88,7 +82,6 @@ namespace WebCWK.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Prescription")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("RecordDate")
@@ -99,6 +92,32 @@ namespace WebCWK.Migrations
                     b.ToTable("MedicalRecords");
                 });
 
+            modelBuilder.Entity("WebCWK.Models.Nurse", b =>
+                {
+                    b.Property<int>("NurseId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ContactNumber")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Specialization")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("NurseId");
+
+                    b.ToTable("Nurse");
+                });
+
             modelBuilder.Entity("WebCWK.Models.Patient", b =>
                 {
                     b.Property<int>("PatientId")
@@ -106,30 +125,24 @@ namespace WebCWK.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ContactNumber")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MedicalHistory")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("PatientId");
