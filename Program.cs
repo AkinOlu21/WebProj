@@ -15,6 +15,10 @@ builder.Services.AddDbContext<HospitalContext>(options =>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<HospitalContext>().AddDefaultTokenProviders();    
 
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddScoped<EmailService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
