@@ -1,8 +1,11 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebCWK.Models
 {
-    public class HospitalContext : DbContext
+    public class HospitalContext : IdentityDbContext<IdentityUser>
+    
     {
 
 

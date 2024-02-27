@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebCWK.Models;
 
@@ -10,6 +11,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<HospitalContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Connection")));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<HospitalContext>().AddDefaultTokenProviders();    
 
 var app = builder.Build();
 
